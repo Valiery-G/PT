@@ -10,6 +10,9 @@
         html {
             scroll-behavior: smooth;
         }
+        body {
+            overflow-x: hidden; /* Mencegah scroll horizontal */
+        }
         .light-mode {
             background-color: #f9f9f9; /* Warna latar belakang untuk light mode */
             color: #333; /* Warna teks untuk light mode */
@@ -45,47 +48,46 @@
 </head>
 <body class="bg-gray-900 text-gray-200 font-sans">
     <!-- Navbar -->
-    <nav class="bg-gray-800 shadow fixed w-full z-50 top-0 left-0">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="flex items-center">
-            <img src="2023-11-08-removebg-preview.png" alt="Logo" class="h-8 w-auto mr-2" />
-            <a href="index.html" class="text-green-400 font-bold text-xl">PT. POTENSI KARYA MANDIRI</a>
+    <nav class="bg-gray-800 shadow fixed w-full z-50 top-0 left-0 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="2023-11-08-removebg-preview.png" alt="Logo" class="h-6 w-auto mr-2 md:h-8" /> <!-- Ukuran logo lebih kecil di mobile -->
+                <a href="index.html" class="text-green-400 font-bold text-lg md:text-xl">PT. POTENSI KARYA MANDIRI</a> <!-- Ukuran teks lebih kecil di mobile -->
+            </div>
+            <ul class="hidden md:flex space-x-4 text-sm md:text-base">
+                <li><a href="index.html" class="text-gray-300 hover:text-green-400 transition">Home</a></li>
+                <li><a href="galeri.html" class="text-gray-300 hover:text-green-400 transition">Galeri</a></li>
+                <li><a href="sertifikat.html" class="text-gray-300 hover:text-green-400 transition">Sertifikat</a></li>
+                <li><a href="clients.html" class="text-gray-300 hover:text-green-400 transition">Klien</a></li>
+                <li><a href="deals.html" class="text-gray-300 hover:text-green-400 transition">Deals</a></li>
+                <li><a href="partner.html" class="text-gray-300 hover:text-green-400 transition">Partner</a></li>
+            </ul>
+            <button id="mode-toggle" class="bg-gray-700 text-white px-2 py-2 rounded">
+                <span id="mode-icon" class="text-lg">🌙</span> <!-- Simbol bulan untuk mode malam -->
+            </button>
         </div>
-        <ul class="hidden md:flex space-x-6">
-            <li><a href="index.html" class="text-gray-300 hover:text-green-400 transition">Home</a></li>
-            <li><a href="galeri.html" class="text-gray-300 hover:text-green-400 transition">Galeri</a></li>
-            <li><a href="sertifikat.html" class="text-gray-300 hover:text-green-400 transition">Sertifikat</a></li>
-            <li><a href="clients.html" class="text-gray-300 hover:text-green-400 transition">Klien</a></li>
-            <li><a href="deals.html" class="text-gray-300 hover:text-green-400 transition">Deals</a></li>
-            <li><a href="partner.html" class="text-gray-300 hover:text-green-400 transition">Partner</a></li>
-        </ul>
-        <button id="mode-toggle" class="bg-gray-700 text-white px-4 py-2 rounded">Mode Malam</button>
-    </div>
-</nav>
-
-
+    </nav>
     <div class="pt-20"></div>
 
     <!-- Hero Section -->
-<section class="h-auto flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-gray-800 to-gray-900 px-8 md:px-20 py-10 md:py-20">
-    <div class="max-w-xl" data-aos="fade-right">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6">Solusi Digital dan Industri Modern</h1>
-        <p class="text-lg mb-6">Kami membantu bisnis Anda berkembang dengan solusi kreatif dan teknologi terbaru.</p>
-        <a href="#about" class="bg-green-600 text-white px-6 py-3 rounded shadow hover:bg-green-700 transition">Pelajari Lebih Lanjut</a>
-    </div>
-    <div class="hidden md:block" data-aos="fade-left">
-        <div class="relative w-full h-64 bg-gray-700 rounded-lg overflow-hidden">
-            <div class="absolute inset-0 bg-green-500 opacity-50"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-                <h2 class="text-4xl font-bold text-white">Inovasi</h2>
+    <section class="h-auto flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-gray-800 to-gray-900 px-4 md:px-20 py-10 md:py-20">
+        <div class="max-w-xl" data-aos="fade-right">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Solusi Digital dan Industri Modern</h1>
+            <p class="text-lg mb-6">Kami membantu bisnis Anda berkembang dengan solusi kreatif dan teknologi terbaru.</p>
+            <a href="#about" class="bg-green-600 text-white px-6 py-3 rounded shadow hover:bg-green-700 transition">Pelajari Lebih Lanjut</a>
+        </div>
+        <div class="hidden md:block" data-aos="fade-left">
+            <div class="relative w-full h-64 bg-gray-700 rounded-lg overflow-hidden">
+                <div class="absolute inset-0 bg-green-500 opacity-50"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h2 class="text-4xl font-bold text-white">Inovasi</h2>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-8 md:px-20 bg-gray-900">
+    <section id="about" class="py-20 px-4 md:px-20 bg-gray-900">
         <h2 class="text-3xl font-bold mb-12 text-center">Tentang Kami</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up">
@@ -104,7 +106,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-8 md:px-20 bg-gray-800">
+    <section id="services" class="py-20 px-4 md:px-20 bg-gray-800">
         <h2 class="text-3xl font-bold mb-10 text-center">Layanan Kami</h2>
         <div class="grid gap-8 md:grid-cols-3" data-aos="fade-up">
             <div class="bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
@@ -123,7 +125,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-8 md:px-20 bg-gray-900">
+    <section id="projects" class="py-20 px-4 md:px-20 bg-gray-900">
         <h2 class="text-3xl font-bold mb-10 text-center">Proyek Terbaru</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
             <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
@@ -146,7 +148,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-8 md:px-20 bg-gray-900">
+    <section id="contact" class="py-20 px-4 md:px-20 bg-gray-900">
         <h2 class="text-3xl font-bold mb-10 text-center">Hubungi Kami</h2>
         <div class="grid md:grid-cols-2 gap-12">
             <form class="space-y-6" data-aos="fade-right" onsubmit="return validateForm()">
@@ -161,27 +163,20 @@
         </div>
     </section>
 
-   <!-- Footer -->
-<footer class="bg-gray-800 text-gray-200 py-6 mt-10">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
-        <p class="text-sm text-center mb-4">&copy; 2025  All rights reserved.</p>
-        <div class="flex flex-col md:flex-row justify-center">
-            <div class="flex flex-col items-center mb-2 md:mb-0 md:mr-4">
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-200 py-6 mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center">
+            <p class="text-sm text-center mb-4">&copy; 2025 All rights reserved.</p>
+            <div class="flex flex-wrap justify-center space-x-4">
                 <a href="index.html" class="hover:underline transition duration-200">Home</a>
                 <a href="galeri.html" class="hover:underline transition duration-200">Galeri</a>
                 <a href="sertifikat.html" class="hover:underline transition duration-200">Sertifikat</a>
-            </div>
-            <div class="flex flex-col items-center mb-2 md:mb-0">
                 <a href="clients.html" class="hover:underline transition duration-200">Klien</a>
                 <a href="deals.html" class="hover:underline transition duration-200">Deals</a>
                 <a href="partner.html" class="hover:underline transition duration-200">Partner</a>
             </div>
         </div>
-    </div>
-</footer>
-
-
-
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -205,16 +200,16 @@
         // Cek preferensi mode dari localStorage
         if (localStorage.getItem('theme') === 'light') {
             body.classList.add('light-mode');
-            modeToggle.textContent = 'Mode Malam';
+            modeToggle.innerHTML = '<span id="mode-icon" class="text-lg">☀️</span>'; // Simbol matahari untuk mode siang
         }
 
         modeToggle.addEventListener('click', () => {
             body.classList.toggle('light-mode');
             if (body.classList.contains('light-mode')) {
-                modeToggle.textContent = 'Mode Malam';
+                modeToggle.innerHTML = '<span id="mode-icon" class="text-lg">🌙</span>'; // Simbol bulan untuk mode malam
                 localStorage.setItem('theme', 'light');
             } else {
-                modeToggle.textContent = 'Mode Siang';
+                modeToggle.innerHTML = '<span id="mode-icon" class="text-lg">☀️</span>'; // Simbol matahari untuk mode siang
                 localStorage.setItem('theme', 'dark');
             }
         });
