@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PT. Potensi Karya Mandiri</title>
+  <title>Green Company - Dark Mode</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
@@ -41,12 +41,13 @@
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center">
         <img src="2023-11-08-removebg-preview.png" alt="Logo" class="h-5 w-auto mr-2 md:h-8" />
-        <a href="index.html" class="text-green-400 font-bold text-sm md:text-lg">PT. POTENSI KARYA MANDIRI</a>
+        <a href="index.html" class="hidden md:block text-green-400 font-bold text-sm md:text-lg">PT. POTENSI KARYA MANDIRI</a>
       </div>
       <div class="flex items-center space-x-2">
-        <button id="mode-toggle" class="bg-gray-700 text-white px-2 py-2 rounded">
-          <span id="mode-icon" class="text-lg">🌙</span>
-        </button>
+        <!-- Ganti tombol mode -->
+        <button id="mode-toggle" class="bg-gray-700 text-white px-4 py-2 rounded-full text-sm font-semibold">
+        <span id="mode-text">Mode Terang</span>
+      </button>
         <button id="mobile-menu-button" class="md:hidden text-white text-2xl">☰</button>
       </div>
       <ul class="hidden md:flex space-x-4 text-xs md:text-sm">
@@ -87,86 +88,246 @@
   </section>
 
   <!-- Tentang Kami -->
-  <section id="about" class="py-20 px-4 md:px-20 bg-gray-900 max-w-screen overflow-x-hidden">
-    <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Tentang Kami</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up">
-        <h3 class="text-xl font-semibold">2018 - Berdiri</h3>
-        <p class="text-gray-400">Didirikan dengan visi digitalisasi sektor industri dan pemerintahan.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up">
-        <h3 class="text-xl font-semibold">2021 - Klien Besar Pertama</h3>
-        <p class="text-gray-400">Melayani berbagai institusi dan perusahaan multinasional.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up">
-        <h3 class="text-xl font-semibold">2024 - Ekspansi Layanan</h3>
-        <p class="text-gray-400">Menjangkau lebih banyak sektor dengan layanan pengadaan dan pemasaran digital.</p>
-      </div>
+<section id="about" class="py-20 px-4 md:px-20 bg-gray-900 max-w-screen overflow-x-hidden">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
+    
+    <!-- Teks -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Tentang Kami</h2>
+      <p class="text-lg text-gray-300 leading-relaxed mb-4">
+        Kami adalah perusahaan yang bergerak di bidang <span class="font-semibold text-green-400">digital transformasi, 
+        software development, desain,</span> dan <span class="font-semibold text-green-400">kreasi konten</span> yang berlokasi di kota Medan. 
+      </p>
+      <p class="text-lg text-gray-300 leading-relaxed mb-4">
+        Dengan fokus pada inovasi, kami bertujuan untuk membantu klien meningkatkan efisiensi 
+        dalam menjalankan bisnis serta memberikan nilai tambah yang akurat sesuai kebutuhan.
+      </p>
+      <p class="text-lg text-gray-300 leading-relaxed">
+        Didukung oleh tim profesional yang berdedikasi, kami percaya dapat menjadi mitra strategis 
+        dalam mendukung transformasi digital dan pertumbuhan bisnis secara berkelanjutan.
+      </p>
     </div>
-  </section>
+
+    <!-- Gambar -->
+    <div class="flex justify-center">
+      <img src="About5.png" alt="Gedung PT Potensi Karya Mandiri" 
+           class="rounded-2xl shadow-lg w-full max-w-md md:max-w-full object-cover" />
+    </div>
+  </div>
+</section>
+
 
   <!-- Services -->
+    <!-- Services -->
   <section id="services" class="py-20 px-4 md:px-20 bg-gray-800 max-w-screen overflow-x-hidden">
-    <h2 class="text-3xl font-bold mb-10 text-center">Layanan Kami</h2>
-    <div class="grid gap-8 md:grid-cols-3" data-aos="fade-up">
-      <div class="bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
-        <h3 class="text-xl font-semibold mb-2">Desain Website</h3>
-        <p class="text-gray-300">Desain profesional dan responsif untuk memperkuat kehadiran online Anda.</p>
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Layanan Kami</h2>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+      <!-- Web Design -->
+      <div class="group relative rounded-xl p-[1px] bg-gradient-to-br from-green-500 to-emerald-500 hover:shadow-2xl transition-transform transform hover:-translate-y-1">
+        <div class="bg-gray-700 rounded-xl p-6 h-full">
+          <div class="flex items-center space-x-3 mb-4">
+            <!-- icon monitor -->
+            <div class="p-3 rounded-lg bg-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 4h18v12H3zM7 20h10M12 16v4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Web Design</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Website modern, cepat, dan responsif dengan fokus pada UI/UX yang nyaman.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">UI/UX</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">SEO-Friendly</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Landing Page</span>
+          </div>
+        </div>
       </div>
-      <div class="bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
-        <h3 class="text-xl font-semibold mb-2">Pengadaan Teknologi</h3>
-        <p class="text-gray-300">Solusi perangkat dan software sesuai kebutuhan industri Anda.</p>
+
+      <!-- Mobile Apps -->
+      <div class="group relative rounded-xl p-[1px] bg-gradient-to-br from-green-500 to-emerald-500 hover:shadow-2xl transition-transform transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="150">
+        <div class="bg-gray-700 rounded-xl p-6 h-full">
+          <div class="flex items-center space-x-3 mb-4">
+            <!-- icon smartphone -->
+            <div class="p-3 rounded-lg bg-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <rect x="7" y="2" width="10" height="20" rx="2" ry="2" stroke-width="1.5"/>
+                <path d="M11 18h2" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Mobile Apps</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Pengembangan aplikasi Android & iOS yang ringan, aman, dan mudah dikembangkan.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Android/iOS</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">API Ready</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Scalable</span>
+          </div>
+        </div>
       </div>
-      <div class="bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
-        <h3 class="text-xl font-semibold mb-2">Manajemen Media Sosial</h3>
-        <p class="text-gray-300">Strategi dan konten untuk menjangkau lebih banyak audiens.</p>
+
+      <!-- Graphic Design -->
+      <div class="group relative rounded-xl p-[1px] bg-gradient-to-br from-green-500 to-emerald-500 hover:shadow-2xl transition-transform transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+        <div class="bg-gray-700 rounded-xl p-6 h-full">
+          <div class="flex items-center space-x-3 mb-4">
+            <!-- icon palette -->
+            <div class="p-3 rounded-lg bg-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 3a9 9 0 100 18h1.5a2.5 2.5 0 100-5H12a4 4 0 01-4-4 4 4 0 014-4h1"/>
+                <circle cx="7.5" cy="10" r="1" fill="currentColor"/>
+                <circle cx="9.5" cy="6.5" r="1" fill="currentColor"/>
+                <circle cx="14.5" cy="6" r="1" fill="currentColor"/>
+                <circle cx="16.5" cy="10" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Graphic Design</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Identitas visual yang konsisten: logo, materi promosi, hingga kemasan.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Branding</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Poster & Feed</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Packaging</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div class="group relative rounded-xl p-[1px] bg-gradient-to-br from-green-500 to-emerald-500 hover:shadow-2xl transition-transform transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="250">
+        <div class="bg-gray-700 rounded-xl p-6 h-full">
+          <div class="flex items-center space-x-3 mb-4">
+            <!-- icon megaphone/chart -->
+            <div class="p-3 rounded-lg bg-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M3 10l10-4v12L3 14V10zM13 6l5-2v16l-5-2M7 15v4a2 2 0 002 2h1"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Digital Marketing</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Strategi data-driven untuk meningkatkan trafik, leads, dan konversi.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">SEO/SEM</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Social Ads</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Analytics</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-20 px-4 md:px-20 bg-gray-900 max-w-screen overflow-x-hidden">
-    <h2 class="text-3xl font-bold mb-10 text-center">Proyek Terbaru</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
-      <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold mb-2">Proyek 1</h3>
-        <p class="text-gray-400">Deskripsi singkat tentang proyek ini.</p>
-      </div>
-      <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold mb-2">Proyek 2</h3>
-        <p class="text-gray-400">Deskripsi singkat tentang proyek ini.</p>
-      </div>
-      <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold mb-2">Proyek 3</h3>
-        <p class="text-gray-400">Deskripsi singkat tentang proyek ini.</p>
-      </div>
-      <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold mb-2">Proyek 4</h3>
-        <p class="text-gray-400">Deskripsi singkat tentang proyek ini.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact -->
+<!-- Project Kami -->
+<section id="projects" class="py-20 px-4 md:px-20 bg-gray-800 max-w-screen overflow-x-hidden">
+  <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">Project Kami</h2>
+    
+    <!-- Grid Project -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      
+      <!-- Card Project -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition duration-300">
+        <img src="https://via.placeholder.com/400x250" alt="Project 1" class="w-full h-56 object-cover" />
+        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+          <h3 class="text-xl font-bold text-white">Project 1</h3>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition duration-300">
+        <img src="https://via.placeholder.com/400x250" alt="Project 2" class="w-full h-56 object-cover" />
+        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+          <h3 class="text-xl font-bold text-white">Project 2</h3>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition duration-300">
+        <img src="https://via.placeholder.com/400x250" alt="Project 3" class="w-full h-56 object-cover" />
+        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+          <h3 class="text-xl font-bold text-white">Project 3</h3>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition duration-300">
+        <img src="https://via.placeholder.com/400x250" alt="Project 4" class="w-full h-56 object-cover" />
+        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+          <h3 class="text-xl font-bold text-white">Project 4</h3>
+        </div>
+      </div>
+
+      <!-- Tambahkan lebih banyak project sesuai kebutuhan -->
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact -->
   <section id="contact" class="py-20 px-4 md:px-20 bg-gray-900 max-w-screen overflow-x-hidden">
-    <h2 class="text-3xl font-bold mb-10 text-center">Hubungi Kami</h2>
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Hubungi Kami</h2>
     <div class="grid md:grid-cols-2 gap-12">
-      <form class="space-y-6" data-aos="fade-right" onsubmit="return validateForm()" action="#" method="POST">
-        <input type="text" id="name" placeholder="Nama" class="w-full border border-gray-600 rounded px-4 py-3 bg-gray-800 text-gray-200" required />
-        <input type="email" id="email" placeholder="Email" class="w-full border border-gray-600 rounded px-4 py-3 bg-gray-800 text-gray-200" required />
-        <textarea id="message" placeholder="Pesan" rows="5" class="w-full border border-gray-600 rounded px-4 py-3 bg-gray-800 text-gray-200" required></textarea>
-        <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition">Kirim Pesan</button>
+      
+      <!-- Form -->
+      <form class="space-y-6 bg-gray-800 p-6 rounded-xl shadow-lg" data-aos="fade-right" onsubmit="return validateForm()" action="#" method="POST">
+        <input type="text" id="name" placeholder="Nama" class="w-full border border-gray-600 rounded px-4 py-3 bg-gray-900 text-gray-200 focus:ring-2 focus:ring-green-500 outline-none" required />
+        <input type="email" id="email" placeholder="Email" class="w-full border border-gray-600 rounded px-4 py-3 bg-gray-900 text-gray-200 focus:ring-2 focus:ring-green-500 outline-none" required />
+        <textarea id="message" placeholder="Pesan" rows="5" class="w-full border border-gray-600 rounded px-4 py-3 bg-gray-900 text-gray-200 focus:ring-2 focus:ring-green-500 outline-none" required></textarea>
+        <button type="submit" class="w-full bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition font-semibold">Kirim Pesan</button>
       </form>
-      <div data-aos="fade-left">
-        <iframe class="w-full h-96 rounded" src="https://maps.google.com/maps?q=PT%20Potensi%20Karya%20Mandiri%20Medan&output=embed"></iframe>
+
+      <!-- Info & Social -->
+      <div class="flex flex-col justify-between" data-aos="fade-left">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-6">
+          <h3 class="text-xl font-semibold mb-4">Kontak Langsung</h3>
+          <p class="text-gray-300 mb-2">PT Potensi Karya Mandiri</p>
+          <p class="text-gray-400 mb-2">Jl. Menteng VII, Komplek Citra Menteng, No.B12 Medan, North Sumatera, 20228</p>
+          <p class="text-gray-400 mb-4">Telp: +62 812 3456 7890</p>
+
+          <h4 class="font-semibold mb-2">Ikuti Kami:</h4>
+          <div class="flex space-x-4">
+            <!-- Instagram -->
+            <a href="https://instagram.com/" target="_blank" class="hover:scale-110 transition">
+              <svg class="w-7 h-7 text-pink-400 hover:text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.25a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/" target="_blank" class="hover:scale-110 transition">
+              <svg class="w-7 h-7 text-blue-400 hover:text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zm7.5-11h4.7v1.7h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 3 5.3 6.8V24h-5v-7.3c0-1.7-.03-3.9-2.4-3.9-2.4 0-2.8 1.8-2.8 3.8V24h-5V13z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://facebook.com/" target="_blank" class="hover:scale-110 transition">
+              <svg class="w-7 h-7 text-blue-500 hover:text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.8h2.6l-.4 3h-2.2v7A10 10 0 0022 12z"/>
+              </svg>
+            </a>
+            <!-- Email -->
+            <a href="mailto:info@potensikarya.co.id" class="hover:scale-110 transition">
+              <svg class="w-7 h-7 text-green-400 hover:text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Maps -->
+        <iframe class="w-full h-72 rounded-xl shadow-lg" src="https://maps.google.com/maps?q=PT%20Potensi%20Karya%20Mandiri%20Medan&output=embed"></iframe>
       </div>
     </div>
   </section>
+
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-gray-200 py-6 mt-10 max-w-screen overflow-x-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center">
       <p class="text-sm text-center mb-4">&copy; 2025 All rights reserved.</p>
+      <div class="flex flex-wrap justify-center space-x-4">
+        <a href="index.html" class="hover:underline transition duration-200">Home</a>
+        <a href="galeri.html" class="hover:underline transition duration-200">Galeri</a>
+        <a href="sertifikat.html" class="hover:underline transition duration-200">Sertifikat</a>
+        <a href="clients.html" class="hover:underline transition duration-200">Klien</a>
+        <a href="deals.html" class="hover:underline transition duration-200">Deals</a>
+        <a href="partner.html" class="hover:underline transition duration-200">Partner</a>
+      </div>
+    </div>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -186,24 +347,29 @@
 
     const modeToggle = document.getElementById('mode-toggle');
     const body = document.body;
-    const modeIcon = document.getElementById('mode-icon');
+    const modeText = document.getElementById('mode-text');
 
+    // load theme awal
     if (localStorage.getItem('theme') === 'light') {
       body.classList.add('light-mode');
-      modeIcon.textContent = '🌙';
+      modeText.textContent = 'Mode Gelap';
+    } else {
+      modeText.textContent = 'Mode Terang';
     }
 
+    // ganti mode
     modeToggle.addEventListener('click', () => {
       body.classList.toggle('light-mode');
       if (body.classList.contains('light-mode')) {
-        modeIcon.textContent = '🌙';
+        modeText.textContent = 'Mode Gelap';
         localStorage.setItem('theme', 'light');
       } else {
-        modeIcon.textContent = '☀️';
+        modeText.textContent = 'Mode Terang';
         localStorage.setItem('theme', 'dark');
       }
     });
 
+    // toggle menu mobile
     document.getElementById("mobile-menu-button").addEventListener("click", function () {
       const menu = document.getElementById("mobile-menu");
       menu.classList.toggle("hidden");
@@ -211,5 +377,3 @@
   </script>
 </body>
 </html>
-
-
